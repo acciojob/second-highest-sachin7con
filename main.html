@@ -8,20 +8,33 @@
 
 <body>	
 	<script>
-		function secondHighest(arr) {
-			//Write your code here
-			
-		}
+		 function secondHighest(arr) {
+		 	//SGN Write your code here
+				 var sol = "-Infinity";
+				if(arr.length == 0 || arr.length == 1){
+					sol = "-Infinity";
+				}else {
+					for (let i = 1; i < arr.length; i++) {
+						 if(arr[i]==arr[0]){
+							 sol = "-Infinity";
+							 }
+					} var sortedArr = arr.sort();
+						sol = sortedArr[n-2];
+				}
+				 
+				
+				return sol;
+		 }
 
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
+		  function Main() {
+		  	var n = prompt("Enter the number of elements");
+		  	var arr = [];
+		  	for (var i = 0; i < n; i++) {
+		  		arr[i] = prompt("Enter element " + (i+1));
+		  	}
+		  	alert(secondHighest(arr));
+		  }
+		  Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
