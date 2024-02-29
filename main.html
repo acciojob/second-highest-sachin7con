@@ -11,15 +11,15 @@
 		 function secondHighest(arr) {
 		 	//SGN Write your code here
 				 var sol = "-Infinity";
-				if(arr.length == 0 || arr.length == 1){
+				if(arr.length <2){
 					sol = "-Infinity";
 				}else {
 					for (let i = 1; i < arr.length; i++) {
 						 if(arr[i]==arr[0]){
 							 sol = "-Infinity";
 							 }
-					} var sortedArr = arr.sort();
-						sol = sortedArr[n-2];
+					} var sortedArr = arr.sort(function(a,b){ return b-a;});
+						sol = sortedArr[arr.length-2];
 				}
 				 
 				
@@ -35,6 +35,7 @@
 		  	alert(secondHighest(arr));
 		  }
 		  Main();
+		
 	</script>
 
     <script type="text/javascript" src="./script.js">
