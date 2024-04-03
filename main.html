@@ -10,21 +10,22 @@
 	<script>
 		 function secondHighest(arr) {
 		 	//SGN Write your code here
+			 
 				 var sol = "";
+			 
 				if(arr.length <2){
 					sol = "-Infinity";
 				}else {
-					for (let i = 1; i < arr.length; i++) {
-						 if(arr[i]==arr[0]){
+					 var sortedArr = arr.sort(function(a, b) {
+            return b - a;
+        });
+					
+						 if(sortedArr[1]==sortedArr[0]){
 							 sol = "-Infinity";
 							 }else {
-							 var sortedArr = arr.sort(function(a,b){ return b-a;});
-								sol = sortedArr[1];
-					
-				}
+							 	sol = sortedArr[1];
 					}
-				 
-				
+				}	
 				return sol;
 		 }
 
@@ -35,6 +36,7 @@
 		  		arr[i] = prompt("Enter element " + (i+1));
 		  	}
 		  	alert(secondHighest(arr));
+			  
 		  }
 		  Main();
 		
