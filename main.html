@@ -10,20 +10,19 @@
 	<script>
 		 function secondHighest(arr) {
 		 	//SGN Write your code here
-				 var sol = "no";
+				 var sol = "";
 				if(arr.length <2){
-					return "-Infinity";
+					sol = "-Infinity";
 				}else {
 					for (let i = 1; i < arr.length; i++) {
 						 if(arr[i]==arr[0]){
-							 return "-Infinity";
-							 }
-					} var sortedArr = arr.sort(function(a,b){ return b-a;});
-						sol = sortedArr[1];
-
-
+							 sol = "-Infinity";
+							 }else {
+							 var sortedArr = arr.sort(function(a,b){ return b-a;});
+								sol = sortedArr[1];
 					
 				}
+					}
 				 
 				
 				return sol;
